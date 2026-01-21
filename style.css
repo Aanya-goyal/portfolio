@@ -1,60 +1,81 @@
-
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1E1B18; /* Espresso */
-    color: #F5F5F5;            /* Ivory text */
-    line-height: 1.7;
-}
-
-
-.container {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-
-.leftbar {
-    background-color: #2A221E; /* Dark cocoa */
-    border-radius: 18px;
-    padding: 30px 25px;
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+    background-image: url(download.jpg);
 }
 
-/* Profile */
-.profile img {
+.home h1 {
+    font-size: 5rem;
+    columns: pink;
+}
+
+.home p {
+    font-size: 2.5rem;
+    margin: 10px 0 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #716b6b;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  #1E1B18;
+    color:#F5F5F5;
+    line-height: 1.8;
+}
+.container{
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    max-width: 1100px;
+    padding: 20px;
+    margin:  60px auto;
+}
+.leftbar{
+
+    background-color: #2A221E;
+    color:#F9FAFB;
+    padding: 30px 25px;
+    text-align: centre;
+     border-radius: 18px;
+}
+.profile img{
     width: 140px;
     height: 140px;
     border-radius: 50%;
+    margin-bottom: 20px;
+    border-radius: 4px #C8A951;
     object-fit: cover;
-    border: 4px solid #C8A951; /* Gold */
+}
+.profile h1{
+    font-size: 24px;
+    color: #D7ccc8;
     margin-bottom: 20px;
 }
-
-.profile h1 {
-    font-size: 24px;
-    color: #D7CCC8;
-    margin-bottom: 5px;
-}
-
-.profile p {
+.profile p{
     font-size: 15px;
     color: #BCAAA4;
     margin-bottom: 20px;
 }
-
-.leftbar hr {
+.leftbar hr{
     border: none;
     height: 1px;
     background-color: #3A2F2A;
@@ -76,34 +97,34 @@ body {
     color: #F5F5F5;
 }
 
-.socials {
+.socials{
     display: flex;
     justify-content: center;
-    gap: 20px;
-    font-size: 22px;
-}
+    gap: 15px;
+    font-size: 23px;
 
-.socials a {
+}
+.socials a{
+    margin-right: 10px;
+    text-decoration: none;
     color: #BCAAA4;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .socials a:hover {
     color: #C8A951;
-    transform: translateY(-4px);
 }
-.rightbar {
-    background-color: #241E1A;
-    border-radius: 18px;
+.rightbar{
+    
+background-color: #241E1A;
     padding: 40px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        border-radius: 18px;
+        border-color: #D4AF37;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.6)
 }
-.navigation nav {
+.navigation nav{
     display: flex;
-    gap: 25px;
-    margin-bottom: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-
 .navigation a {
     text-decoration: none;
     font-weight: 600;
@@ -114,65 +135,59 @@ body {
 .navigation a::after {
     content: "";
     position: absolute;
-    width: 0;
+    width: 0px;
     height: 2px;
     background-color: #C8A951;
     left: 0;
     bottom: -6px;
-    transition: width 0.3s ease;
+     transition: width 0.3s ease;
 }
-
 .navigation a:hover::after {
     width: 100%;
 }
-
-
-section {
-    margin-bottom: 45px;
+section{
+    margin-bottom: 40px;
 }
-
-section h2 {
-    font-size: 26px;
+.section h2{
+    font-size: 25px;
     color: #D7CCC8;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: inline-block;
     border-bottom: 3px solid #C8A951;
     padding-bottom: 5px;
 }
-
-.about p {
+.about p{
     color: #F5F5F5;
     max-width: 700px;
 }
 
-.skills {
+.skills{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 25px;
+    grid: 25px;
     margin-top: 20px;
-}
 
-.skills img {
+}
+.skills img{
     width: 70px;
     height: 70px;
-    filter: brightness(0.9);
 }
-.projects p {
-    margin-top: 10px;
-    color: #BCAAA4;
+.projects p{
+    margin-top: 15px;
+    color:  #BCAAA4;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     .container {
         grid-template-columns: 1fr;
     }
-
-    .leftbar {
+     .leftbar{
         margin-bottom: 30px;
-    }
 
-    .navigation nav {
+     }
+     .navigation nav{
         flex-wrap: wrap;
-        gap: 15px;
-    }
+        gap: 15px
+     }
+   
+   
 }
